@@ -59,7 +59,7 @@ flutter:
   fonts:
      - family: Roboto
        fonts:
-         - asset: a
+         - asset: assets/font/Roboto-Regular.ttf
      - family: Roboto Bold
        fonts:
          - asset: assets/font/Roboto-Bold.ttf
