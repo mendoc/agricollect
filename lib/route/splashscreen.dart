@@ -1,3 +1,4 @@
+import 'package:agricollect/route/home.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -10,8 +11,23 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("SplashScreen"),
+        child: Image.asset(
+          "assets/img/bg_splash.jpg",
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.fitWidth,
+        ),
       ),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => HomeScreen()));
+    });
   }
 }
