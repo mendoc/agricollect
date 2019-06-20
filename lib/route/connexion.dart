@@ -1,6 +1,8 @@
 import 'package:agricollect/route/inscription.dart';
 import 'package:flutter/material.dart';
 import 'package:agricollect/config.dart';
+import 'package:agricollect/route/home.dart';
+import 'package:agricollect/route/reset_page.dart';
 
 class Connexion extends StatefulWidget {
   @override
@@ -83,7 +85,13 @@ class _ConnexionState extends State<Connexion> {
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0)),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                // Navigator.push permet de mettre une interface au dessus d'une autre
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeScreen()));
+                          },
                           color: Color(0xffbf3b02),
                           child: Text(
                             "SE CONNECTER",
@@ -99,7 +107,8 @@ class _ConnexionState extends State<Connexion> {
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(// Navigator.push permet de mettre une interface au dessus d'une autre
+                          Navigator.push(
+                            // Navigator.push permet de mettre une interface au dessus d'une autre et represente un aller avec un possible retour
                             context,
                             MaterialPageRoute(
                                 builder: (context) => Inscription()),
@@ -117,7 +126,13 @@ class _ConnexionState extends State<Connexion> {
                     Container(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushReplacement( //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Reset()),
+                          );
+                        },
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Center(
