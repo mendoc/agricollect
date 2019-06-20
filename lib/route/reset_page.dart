@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:agricollect/route/insert_code.dart';
 
 class Reset extends StatefulWidget {
   @override
@@ -66,7 +67,13 @@ class _ResetState extends State<Reset> {
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
+                      context,
+                      MaterialPageRoute(builder: (context) => InsertCode()),
+                    );
+                  },
                   color: Color(0xffbf3b02),
                   child: Text(
                     "ENVOYER",

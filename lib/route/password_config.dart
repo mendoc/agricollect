@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:agricollect/route/connexion.dart';
 
 class NewPassword extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _NewPasswordState extends State<NewPassword> {
             children: <Widget>[
               Center(
                   child: Padding(
-                padding: const EdgeInsets.only(top: 130),
+                padding: const EdgeInsets.only(top: 60),
                 child: Container(
                   child: Image.asset(
                     'assets/img/logo.png',
@@ -25,22 +26,15 @@ class _NewPasswordState extends State<NewPassword> {
               )),
               Container(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 70, left: 25, right: 25),
-                 child: Center(
-                   child: Text(
-                     "MODIFIER MOT DE PASSE",
-                     style: TextStyle(
-                        color: Color(0xff409618),
-                        fontSize: 25,
-                        fontWeight:FontWeight.bold,
-                      ),
-                   ),
-                 )
-                ),
+                    padding:
+                        const EdgeInsets.only(top: 10, left: 25, right: 25),
+                    child: Center(
+                      child: Text("REINITIALISATION DU MOT DE PASSE"),
+                    )),
               ),
               Container(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 50, left: 25, right: 25),
+                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
                   child: TextFormField(
                     autofocus: true,
                     obscureText: true,
@@ -55,7 +49,7 @@ class _NewPasswordState extends State<NewPassword> {
               ),
               Container(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 50, left: 25, right: 25),
+                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
                   child: TextFormField(
                     autofocus: true,
                     obscureText: true,
@@ -71,14 +65,20 @@ class _NewPasswordState extends State<NewPassword> {
                 width: double.infinity,
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 50),
+                  padding: const EdgeInsets.only(top: 20),
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
+                        context,
+                        MaterialPageRoute(builder: (context) => Connexion()),
+                      );
+                    },
                     color: Color(0xffbf3b02),
                     child: Text(
-                      "ENVOYER",
+                      "S'INSCRIRE",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
