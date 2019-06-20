@@ -23,111 +23,129 @@ class _InscriptionState extends State<Inscription> {
                   ),
                 ),
               )),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                  child: TextFormField(
-                    autofocus: true,
-                    decoration: InputDecoration(
-                        labelText: 'Nom',
-                        prefixIcon: Icon(
-                          Icons.account_circle,
-                        )),
-                  ),
-                ),
-              ),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                  child: TextFormField(
-                    autofocus: true,
-                    decoration: InputDecoration(
-                        labelText: 'Prénom',
-                        prefixIcon: Icon(
-                          Icons.account_circle,
-                        )),
-                  ),
-                ),
-              ),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                  child: TextFormField(
-                    autofocus: true,
-                    decoration: InputDecoration(
-                        labelText: 'Téléphone',
-                        prefixIcon: Icon(
-                          Icons.phone,
-                        )),
-                  ),
-                ),
-              ),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                  child: TextFormField(
-                    autofocus: true,
-                    decoration: InputDecoration(
-                        labelText: 'Email',
-                        prefixIcon: Icon(
-                          Icons.email,
-                        )),
-                  ),
-                ),
-              ),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                  child: TextFormField(
-                    autofocus: true,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Mot de passe',
-                      prefixIcon: Icon(
-                        Icons.lock,
+              Column(
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 25, right: 25),
+                          child: TextFormField(
+                            autofocus: true,
+                            decoration: InputDecoration(
+                                labelText: 'Nom',
+                                prefixIcon: Icon(
+                                  Icons.account_circle,
+                                )),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                  child: TextFormField(
-                    autofocus: true,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        labelText: 'Confirmer le mot de passe',
-                        prefixIcon: Icon(
-                          Icons.lock,
-                        )),
-                  ),
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0)),
-                    onPressed: () {},
-                    color: Color(0xffbf3b02),
-                    child: Text(
-                      "S'INSCRIRE",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 25, right: 25),
+                          child: TextFormField(
+                            autofocus: true,
+                            decoration: InputDecoration(
+                                labelText: 'Prénom',
+                                prefixIcon: Icon(
+                                  Icons.account_circle,
+                                )),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 25, right: 25),
+                          child: TextFormField(
+                            keyboardType: TextInputType.phone,
+                            autofocus: true,
+                            decoration: InputDecoration(
+                                labelText: 'Téléphone',
+                                prefixIcon: Icon(
+                                  Icons.phone,
+                                )),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 25, right: 25),
+                          child: TextFormField(
+                            keyboardType: TextInputType.emailAddress,
+                            autofocus: true,
+                            decoration: InputDecoration(
+                                labelText: 'Email',
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                )),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 25, right: 25),
+                          child: TextFormField(
+                            autofocus: true,
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              labelText: 'Mot de passe',
+                              prefixIcon: Icon(
+                                Icons.lock,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 25, right: 25),
+                          child: TextFormField(
+                            autofocus: true,
+                            obscureText: true,
+                            decoration: InputDecoration(
+                                labelText: 'Confirmer le mot de passe',
+                                prefixIcon: Icon(
+                                  Icons.lock,
+                                )),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0)),
+                            onPressed: () {},
+                            color: Color(0xffbf3b02),
+                            child: Text(
+                              "S'INSCRIRE",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
               ),
               Container(
                 padding: const EdgeInsets.only(left: 20, right: 20),
-                child: InkWell(//inkwell prend en propriete onTap
-                  onTap: () {// Navigator.pop equivaut a l'appui sur le bouton retour, on
+                child: InkWell(
+                  //inkwell prend en propriete onTap
+                  onTap: () {
+                    // Navigator.pop equivaut a l'appui sur le bouton retour, on
                     Navigator.pop(context);
                   },
                   child: Padding(
