@@ -52,7 +52,7 @@ class _ConnexionState extends State<Connexion> {
                         padding:
                             const EdgeInsets.only(top: 10, left: 25, right: 25),
                         child: TextFormField(
-                          autofocus: true,
+//                          autofocus: true,
                           decoration: InputDecoration(
                               labelText: 'Email',
                               prefixIcon: Icon(
@@ -66,7 +66,7 @@ class _ConnexionState extends State<Connexion> {
                         padding:
                             const EdgeInsets.only(top: 10, left: 25, right: 25),
                         child: TextFormField(
-                          autofocus: true,
+//                          autofocus: true,
                           obscureText: true,
                           decoration: InputDecoration(
                             labelText: 'Mot de passe',
