@@ -74,7 +74,7 @@ class _NewPasswordState extends State<NewPassword> {
                     onPressed: () {},
                     color: Color(0xffbf3b02),
                     child: Text(
-                      "S'INSCRIRE",
+                      "Envoyer",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
