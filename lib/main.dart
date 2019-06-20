@@ -1,4 +1,4 @@
-import 'package:agricollect/route/inscription.dart';
+import 'package:agricollect/route/password_config.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'AGRI COLLECT',
-      home: Inscription(),
+      home: NewPassword(),
     );
   }
 }
