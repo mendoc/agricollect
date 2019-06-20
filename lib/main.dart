@@ -1,5 +1,5 @@
 import 'package:agricollect/config.dart';
-import 'package:agricollect/route/reset_page.dart';
+import 'package:agricollect/route/insert_code.dart';
 // import 'package:agricollect/route/inscription.dart';
 // import 'package:agricollect/route/reset_page.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: mainColor),
       title: 'AGRI COLLECT',
-      home: Reset(),
+      home: InsertCode(),
     );
   }
 }
