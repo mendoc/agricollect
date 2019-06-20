@@ -3,6 +3,7 @@ import 'package:agricollect/route/connexion.dart';
 
 class NewPassword extends StatefulWidget {
   @override
+  
   _NewPasswordState createState() => _NewPasswordState();
 }
 
@@ -17,7 +18,7 @@ class _NewPasswordState extends State<NewPassword> {
               Center(
                   child: Padding(
                 padding: const EdgeInsets.only(top: 60),
-                child: Container(
+                child: Container( 
                   child: Image.asset(
                     'assets/img/logo.png',
                     width: 180,
@@ -26,11 +27,13 @@ class _NewPasswordState extends State<NewPassword> {
               )),
               Container(
                 child: Padding(
-                    padding:
-                        const EdgeInsets.only(top: 10, left: 25, right: 25),
-                    child: Center(
-                      child: Text("REINITIALISATION DU MOT DE PASSE"),
-                    )),
+                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
+                 child: Center(
+                   child: Text(
+                     "REINITIALISATION DU MOT DE PASSE"
+                   ),
+                 )
+                ),
               ),
               Container(
                 child: Padding(
@@ -78,7 +81,7 @@ class _NewPasswordState extends State<NewPassword> {
                     },
                     color: Color(0xffbf3b02),
                     child: Text(
-                      "S'INSCRIRE",
+                      "VALIDER",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
