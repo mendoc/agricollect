@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:agricollect/route/password_config.dart';
 
 class InsertCode extends StatefulWidget {
   @override
@@ -66,10 +67,16 @@ class _InsertCodeState extends State<InsertCode> {
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
+                      context,
+                      MaterialPageRoute(builder: (context) => NewPassword()),
+                    );
+                  },
                   color: Color(0xffbf3b02),
                   child: Text(
-                    "ENVOYER",
+                    "VALIDER",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,

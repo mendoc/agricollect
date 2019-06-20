@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:agricollect/route/insert_code.dart';
 
 class Reset extends StatefulWidget {
   @override
@@ -28,14 +29,14 @@ class _ResetState extends State<Reset> {
               child: Text(
                 'REINITIALISEZ VOTRE MOT DE PASSE',
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: 17,
                   color: Color(0xff3a783a),
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 45),
+              padding: const EdgeInsets.only(top: 45,left: 15, right: 15),
               child: Text(
                 'Veuillez préciser votre Email afin de recevoir\n le lien de réinitialisation de votre mot de passe',
                 textAlign: TextAlign.center,
@@ -66,7 +67,13 @@ class _ResetState extends State<Reset> {
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
+                      context,
+                      MaterialPageRoute(builder: (context) => InsertCode()),
+                    );
+                  },
                   color: Color(0xffbf3b02),
                   child: Text(
                     "ENVOYER",

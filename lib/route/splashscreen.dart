@@ -1,4 +1,4 @@
-import 'package:agricollect/route/home.dart';
+import 'package:agricollect/route/connexion.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
           height: double.infinity,
           fit: BoxFit.fitWidth,
         ),
+        
       ),
     );
   }
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Future.delayed(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen()));
+          MaterialPageRoute(builder: (context) => Connexion()));
     });
   }
 }
