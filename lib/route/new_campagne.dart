@@ -203,95 +203,97 @@ class _NewCampagneState extends State<NewCampagne>
                         child: Column(
                           children: <Widget>[
                             Container(
-                      child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 10, left: 25, right: 25),
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                                top: 20, left: 15, right: 15),
-                            child: Column(
-                              children: <Widget>[
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      'Photo',
-                                      style: TextStyle(
-                                        fontSize: 22,
-                                      ),
+                              child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 10, left: 25, right: 25),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 20, left: 15, right: 15),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Row(
+                                          children: <Widget>[
+                                            Text(
+                                              'Photo',
+                                              style: TextStyle(
+                                                fontSize: 22,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 5),
+                                              child: Text(
+                                                '*',
+                                                style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 22,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        TextFormField(
+                                          autofocus: true,
+                                          decoration: InputDecoration(
+                                              hintText: 'Telechargez une photo',
+                                              prefixIcon: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    bottom: 8),
+                                                child: Icon(
+                                                  Icons.file_upload,
+                                                ),
+                                              )),
+                                        ),
+                                      ],
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        '*',
-                                        style: TextStyle(
-                                          color: Colors.red,
-                                          fontSize: 22,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                TextFormField(
-                                  autofocus: true,
-                                  decoration: InputDecoration(
-                                      hintText: 'Telechargez une photo',
-                                      prefixIcon: Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 8),
-                                        child: Icon(
-                                          Icons.file_upload,
-                                        ),
-                                      )),
-                                ),
-                              ],
+                                  )),
                             ),
-                          )),
-                    ),
-                    Container(
-                      child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 10, left: 25, right: 25),
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                                top: 20, left: 15, right: 15),
-                            child: Column(
-                              children: <Widget>[
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      'Photo',
-                                      style: TextStyle(
-                                        fontSize: 22,
-                                      ),
+                            Container(
+                              child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 10, left: 25, right: 25),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 20, left: 15, right: 15),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Row(
+                                          children: <Widget>[
+                                            Text(
+                                              'Photo',
+                                              style: TextStyle(
+                                                fontSize: 22,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 5),
+                                              child: Text(
+                                                '*',
+                                                style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 22,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                        TextFormField(
+                                          autofocus: true,
+                                          decoration: InputDecoration(
+                                              hintText: 'Telechargez une photo',
+                                              prefixIcon: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    bottom: 8),
+                                                child: Icon(
+                                                  Icons.file_upload,
+                                                ),
+                                              )),
+                                        ),
+                                      ],
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        '*',
-                                        style: TextStyle(
-                                          color: Colors.red,
-                                          fontSize: 22,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                TextFormField(
-                                  autofocus: true,
-                                  decoration: InputDecoration(
-                                      hintText: 'Telechargez une photo',
-                                      prefixIcon: Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 8),
-                                        child: Icon(
-                                          Icons.file_upload,
-                                        ),
-                                      )),
-                                ),
-                              ],
+                                  )),
                             ),
-                          )),
-                    ),
                           ],
                         ),
                       ),
