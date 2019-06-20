@@ -1,9 +1,9 @@
+import 'package:agricollect/config.dart';
 import 'package:flutter/material.dart';
 import 'package:agricollect/route/connexion.dart';
 
 class NewPassword extends StatefulWidget {
   @override
-  
   _NewPasswordState createState() => _NewPasswordState();
 }
 
@@ -16,28 +16,35 @@ class _NewPasswordState extends State<NewPassword> {
           child: Column(
             children: <Widget>[
               Center(
-                  child: Padding(
-                padding: const EdgeInsets.only(top: 60),
-                child: Container( 
-                  child: Image.asset(
-                    'assets/img/logo.png',
-                    width: 180,
-                  ),
-                ),
-              )),
-              Container(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                 child: Center(
-                   child: Text(
-                     "REINITIALISATION DU MOT DE PASSE"
-                   ),
-                 )
+                  padding: const EdgeInsets.only(top: 1),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Image.asset(
+                      "assets/img/LOGOREFONTE.png",
+                      width: 200.0,
+                      height: 200.0,
+                    ),
+                  ),
                 ),
               ),
               Container(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
+                    padding:
+                        const EdgeInsets.only(top: 10, left: 25, right: 25),
+                    child: Center(
+                      child: Text(
+                        "REINITIALISATION DU MOT DE PASSE ",
+                        style: TextStyle(
+                            color: mainColor,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15.0),
+                      ),
+                    )),
+              ),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15, left: 25, right: 25),
                   child: TextFormField(
                     autofocus: true,
                     obscureText: true,
