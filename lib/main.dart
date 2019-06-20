@@ -1,4 +1,5 @@
-import 'package:agricollect/route/splashscreen.dart';
+// import 'package:agricollect/route/splashscreen.dart';
+import 'package:agricollect/route/reset_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'AGRI COLLECT',
-      home: SplashScreen(),
+      home: Reset(),
     );
   }
 }
