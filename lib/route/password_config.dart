@@ -34,7 +34,7 @@ class _NewPasswordState extends State<NewPassword> {
                         const EdgeInsets.only(top: 10, left: 25, right: 25),
                     child: Center(
                       child: Text(
-                        "REINITIALISATION DU MOT DE PASSE",
+                        "REINITIALISATION DU MOT DE PASSE ",
                         style: TextStyle(
                             color: mainColor,
                             fontWeight: FontWeight.bold,
