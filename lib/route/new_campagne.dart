@@ -9,13 +9,7 @@ class NewCampagne extends StatefulWidget {
 
 class _NewCampagneState extends State<NewCampagne>
     with SingleTickerProviderStateMixin {
-  TabController _controller;
 
-  @override
-  void initState() {
-    super.initState();
-    _controller = new TabController(length: 2, vsync: this);
-  }
 
   @override
   Widget build(BuildContext context) {
