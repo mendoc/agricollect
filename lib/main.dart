@@ -1,4 +1,4 @@
-import 'package:agricollect/route/new_campagne.dart';
+import 'package:agricollect/route/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'config.dart';
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: mainColor),
       title: 'AGRI COLLECT',
-      home: NewCampagne()
+      home: SplashScreen()
     );
   }
 }

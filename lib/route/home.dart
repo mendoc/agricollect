@@ -2,6 +2,7 @@ import 'package:agricollect/config.dart';
 import 'package:agricollect/route/connexion.dart';
 import 'package:flutter/material.dart';
 import 'package:agricollect/widget/campagne.dart';
+import 'package:agricollect/route/new_campagne.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -79,10 +80,10 @@ class _HomeScreenState extends State<HomeScreen>
               title: Text("Déconnexion"),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.pushReplacement( //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
+                Navigator.pushReplacement(
+                  //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => Connexion()),
+                  MaterialPageRoute(builder: (context) => Connexion()),
                 );
               }),
         ],
@@ -284,10 +285,17 @@ class _HomeScreenState extends State<HomeScreen>
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-        // Add your onPressed code here!
-       },
+        floatingActionButton: FloatingActionButton.extended(
+            onPressed: () {
+              // Add your onPressed code here!
+              Navigator.push(
+                  // Navigator.push permet de mettre une interface au dessus d'une autre
+                  context,
+                  MaterialPageRoute(builder: (context) => NewCampagne()));
+            },
+            label: Text('Nouvelle campagne'),
+            icon: Icon(Icons.add),
+            backgroundColor: Colors.deepOrange),
       ),
     );
   }
