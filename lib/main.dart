@@ -1,4 +1,4 @@
-import 'package:agricollect/route/splashscreen.dart';
+import 'package:agricollect/route/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
