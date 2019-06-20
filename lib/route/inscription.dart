@@ -126,8 +126,10 @@ class _InscriptionState extends State<Inscription> {
               ),
               Container(
                 padding: const EdgeInsets.only(left: 20, right: 20),
-                child: InkWell(
-                  onTap: () {},
+                child: InkWell(//inkwell prend en propriete onTap
+                  onTap: () {// Navigator.pop equivaut a l'appui sur le bouton retour, on
+                    Navigator.pop(context);
+                  },
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Center(
