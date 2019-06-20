@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
           height: double.infinity,
           fit: BoxFit.fitWidth,
         ),
+        
       ),
     );
   }
