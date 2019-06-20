@@ -3,6 +3,8 @@ import 'package:agricollect/route/connexion.dart';
 // import 'package:agricollect/route/inscription.dart';
 // import 'package:agricollect/route/reset_page.dart';
 import 'package:flutter/material.dart';
+import 'package:agricollect/route/profile.dart';
+
 
 void main() => runApp(MyApp());
 
