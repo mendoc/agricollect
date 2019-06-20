@@ -24,11 +24,11 @@ class _NewCampagneState extends State<NewCampagne>
         padding: EdgeInsets.only(top: 30.0),
         color: Colors.white,
         child: SingleChildScrollView(
-                  child: Column(
+          child: Column(
             children: <Widget>[
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 15.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -53,165 +53,274 @@ class _NewCampagneState extends State<NewCampagne>
                 child: Column(
                   children: <Widget>[
                     Container(
-                      child: Padding(
-                          padding:
-                              const EdgeInsets.only(top: 50, left: 25, right: 25),
-                          child: Center(
+                      color: mainColor,
+                      width: double.infinity,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 22),
                             child: Text(
-                              "CREATION DE CAMPAGNE",
+                              "CRÉATION DE CAMPAGNE",
                               style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold,
-                              ),
+                                  color: Colors.white,
+                                  fontFamily: "Roboto Bold",
+                                  fontSize: 20.0),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10),
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 20, left: 15, right: 15),
+                            child: Column(
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    Text(
+                                      'Libellé',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5),
+                                      child: Text(
+                                        '*',
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                TextFormField(
+                                  autofocus: true,
+                                  decoration: InputDecoration(
+                                      hintText:
+                                          'Inscrivez le titre de votre campagne'),
+                                ),
+                              ],
                             ),
                           )),
                     ),
                     Container(
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top:20, left:15, right: 15),
-                          child: Column(
-                            children: <Widget>[
-                              Row(
-                                children: <Widget>[
-                                  Text(
-                                    'Libelle',
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 5),
-                                    child: Text(
-                                      '*',
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10),
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 20, left: 15, right: 15),
+                            child: Column(
+                              children: <Widget>[
+                                Row(
+                                  children: <Widget>[
+                                    Text(
+                                      'Description',
                                       style: TextStyle(
-                                        color: Colors.red,
-                                        fontSize: 22,
+                                        fontSize: 18,
                                       ),
                                     ),
-                                  )
-                                ],
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5),
+                                      child: Text(
+                                        '*',
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                TextFormField(
+                                  autofocus: true,
+                                  decoration: InputDecoration(
+                                      hintText: 'Inscrivez la description',
+                                      prefixIcon: Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 8),
+                                        child: Icon(
+                                          Icons.info,
+                                        ),
+                                      )),
+                                ),
+                              ],
+                            ),
+                          )),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            width: double.infinity,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8.0),
+                              child: Text(
+                                'Photo',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
                               ),
-                              TextFormField(
-                                autofocus: true,
-                                decoration: InputDecoration(
-                                hintText: 'Inscriver le titre de votre campagne'
+                            )
+                          ),
+                          Container(
+                            width: double.infinity,
+                            child: RaisedButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Télécharger",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
-                          ],
                           ),
-                        )
+                        ],
                       ),
                     ),
                     Container(
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top:20, left:15, right: 15),
-                          child: Column(
-                            children: <Widget>[
-                              Row(
-                                children: <Widget>[
-                                  Text(
-                                    'Description',
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 5),
-                                    child: Text(
-                                      '*',
-                                      style: TextStyle(
-                                        color: Colors.red,
-                                        fontSize: 22,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              TextFormField(
-                                autofocus: true,
-                                decoration: InputDecoration(
-                                hintText: 'Inscriver le titre de votre campagne',
-                                prefixIcon: Padding(
-                                  padding: const EdgeInsets.only(bottom:8),
-                                  child: Icon(
-                                    Icons.info,
-                                  ),
-                                )
-                              ),
-                            ),
-                          ],
-                          ),
-                        )
-                      ),
-                    ),
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top:20, left:15, right: 15),
-                          child: Column(
-                            children: <Widget>[
-                              Row(
-                                children: <Widget>[
-                                  Text(
-                                    'Photo',
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 5),
-                                    child: Text(
-                                      '*',
-                                      style: TextStyle(
-                                        color: Colors.red,
-                                        fontSize: 22,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              TextFormField(
-                                autofocus: true,
-                                decoration: InputDecoration(
-                                hintText: 'Telechargez une photo',
-                                prefixIcon: Padding(
-                                  padding: const EdgeInsets.only(bottom:8),
-                                  child: Icon(
-                                    Icons.file_upload,
-                                  ),
-                                )
-                              ),
-                            ),
-                          ],
-                          ),
-                        )
-                      ),
-                    ),
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
+                        padding:
+                            const EdgeInsets.only(top: 10, left: 10, right: 10),
                         child: Row(
                           children: <Widget>[
-                            Container(
-                              width: 100,
-                              color: Colors.red,
+                            Expanded(
+                              child: Container(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 20, left: 15, right: 20),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Row(
+                                          children: <Widget>[
+                                            Text(
+                                              'Date de début',
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 5),
+                                              child: Text(
+                                                '*',
+                                                style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        TextFormField(
+                                          keyboardType: TextInputType.datetime,
+                                          autofocus: true,
+                                          decoration: InputDecoration(
+                                            hintText: '01/02/2019',
+                                            prefixIcon: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  bottom: 8),
+                                              child: Icon(
+                                                Icons.date_range,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ),
-                            Container(
-                              width: 100,
-                              color: Colors.grey,
-                            )
+                            Expanded(
+                              child: Container(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 10,
+                                    left: 10,
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 20, left: 10, right: 15),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Row(
+                                          children: <Widget>[
+                                            Text(
+                                              'Date de fin',
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 5),
+                                              child: Text(
+                                                '*',
+                                                style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 18,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        TextFormField(
+                                          keyboardType: TextInputType.datetime,
+                                          autofocus: true,
+                                          decoration: InputDecoration(
+                                            hintText: '02/06/2019',
+                                            prefixIcon: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  bottom: 8),
+                                              child: Icon(
+                                                Icons.date_range,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
-                        )
+                        ),
+                      ),
+                    ),
+                    Container(
+                      //width: double.infinity,
+                      padding: const EdgeInsets.only(left: 20, right: 20),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 40, bottom: 20),
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          onPressed: () {},
+                          color: Color(0xffbf3b02),
+                          child: Text("VALIDER",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              )),
+                        ),
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

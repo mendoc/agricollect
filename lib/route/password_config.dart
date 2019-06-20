@@ -88,15 +88,11 @@ class _NewPasswordState extends State<NewPassword> {
                     },
                     color: Color(0xffbf3b02),
                     child: Text(
-<<<<<<< HEAD
-                      "Envoyer",
-=======
                       "VALIDER",
->>>>>>> 3dbacbb58aa88434305963fa9505d19412f20a0e
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
-                      ),
+                      )
                     ),
                   ),
                 ),
