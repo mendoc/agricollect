@@ -1,4 +1,5 @@
 import 'package:agricollect/config.dart';
+import 'package:agricollect/route/connexion.dart';
 import 'package:flutter/material.dart';
 import 'package:agricollect/widget/campagne.dart';
 
@@ -78,6 +79,11 @@ class _HomeScreenState extends State<HomeScreen>
               title: Text("Déconnexion"),
               onTap: () {
                 Navigator.of(context).pop();
+                Navigator.pushReplacement( //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Connexion()),
+                );
               }),
         ],
       ),
