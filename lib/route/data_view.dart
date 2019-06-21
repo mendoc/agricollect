@@ -406,7 +406,7 @@ class _DataViewState extends State<DataView>
                                             Container(
                                               width: double.maxFinite,
                                               child: Text(
-                                                "280",
+                                                "280 collectes",
                                                 style: TextStyle(
                                                   color: Colors.grey[600],
                                                   fontSize: 20.0,
