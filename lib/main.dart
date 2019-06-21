@@ -1,5 +1,8 @@
+
 import 'package:agricollect/config.dart';
+import 'package:agricollect/route/personal_campaign.dart';
 import 'package:agricollect/route/public_campaign.dart';
+import 'package:agricollect/route/splashscreen.dart';
 // import 'package:agricollect/route/inscription.dart';
 // import 'package:agricollect/route/reset_page.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +18,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: mainColor),
       title: 'AGRI COLLECT',
-      home: DataView(),
+
+      home: PersonalCampaign(),
     );
   }
 }

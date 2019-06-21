@@ -2,6 +2,7 @@ import 'package:agricollect/config.dart';
 import 'package:agricollect/route/connexion.dart';
 import 'package:flutter/material.dart';
 import 'package:agricollect/widget/campagne.dart';
+import 'package:agricollect/widget/menu_lateral.dart';
 import 'package:agricollect/route/new_campagne.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,10 +14,6 @@ class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController _controller;
 
-  String mainProfilePicture = "assets/img/user_placeholder.jpg";
-  String otherProfilePicture =
-      "https://randomuser.me/api/portraits/women/47.jpg";
-
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
 
   @override
@@ -27,68 +24,10 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    Drawer dr = Drawer(
-      child: ListView(
-        children: <Widget>[
-          UserAccountsDrawerHeader(
-            accountName: Text("Mbadinga Moure"),
-            accountEmail: Text("m.mbadinga@gmail.com"),
-            currentAccountPicture: GestureDetector(
-              onTap: () {},
-              child: CircleAvatar(
-                backgroundColor: Colors.grey,
-                backgroundImage: AssetImage(
-                  mainProfilePicture,
-                ),
-              ),
-            ),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage("assets/img/fond_drawer.jpg"))),
-          ),
-          ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Accueil"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => OtherPage("Accueil")));
-              }),
-          ListTile(
-              leading: Icon(Icons.edit),
-              title: Text("Editer mon profil"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) =>
-                        OtherPage("Editer mon profil")));
-              }),
-          ListTile(
-              leading: Icon(Icons.info_outline),
-              title: Text("A propos de l'application"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) =>
-                        OtherPage("A propos de l'application")));
-              }),
-          Divider(),
-          ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text("Déconnexion"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.pushReplacement(
-                  //pushReplacement represante un allé simple la page connexion va donc etre fermer une fois arriver
-                  context,
-                  MaterialPageRoute(builder: (context) => Connexion()),
-                );
-              }),
-        ],
-      ),
-    );
+    MenuLateral dr = MenuLateral(
+      nom: "Mbadinbga Moure",
+      email: "m.mbadinga@gmail.com"
+      );
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,

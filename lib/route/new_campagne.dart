@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:agricollect/config.dart';
 import 'package:flutter/painting.dart';
+import 'package:agricollect/widget/menu_lateral.dart';
 
 class NewCampagne extends StatefulWidget {
   @override
@@ -9,15 +10,14 @@ class NewCampagne extends StatefulWidget {
 
 class _NewCampagneState extends State<NewCampagne>
     with SingleTickerProviderStateMixin {
-
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        padding: EdgeInsets.only(top: 30.0),
-        color: Colors.white,
-        child: SingleChildScrollView(
+    MenuLateral dr =
+        MenuLateral(nom: "Mbadinbga Moure", email: "m.mbadinga@gmail.com");
+    return SafeArea(
+      child: Scaffold(
+        drawer: dr,
+        body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Padding(
@@ -26,10 +26,15 @@ class _NewCampagneState extends State<NewCampagne>
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Icon(
-                      Icons.menu,
-                      size: 35.0,
-                      color: mainColor,
+                    InkWell(
+                      child: Icon(
+                        Icons.menu,
+                        size: 35.0,
+                        color: mainColor,
+                      ),
+                      onTap: () {
+                        
+                      },
                     ),
                     Image.asset(
                       "assets/img/logo.png",
@@ -151,21 +156,22 @@ class _NewCampagneState extends State<NewCampagne>
                     ),
                     Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                      padding:
+                          const EdgeInsets.only(top: 30, left: 20, right: 20),
                       child: Column(
                         children: <Widget>[
                           Container(
-                            width: double.infinity,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8.0),
-                              child: Text(
-                                'Photo',
-                                style: TextStyle(
-                                  fontSize: 18,
+                              width: double.infinity,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8.0),
+                                child: Text(
+                                  'Photo',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                  ),
                                 ),
-                              ),
-                            )
-                          ),
+                              )),
                           Container(
                             width: double.infinity,
                             child: RaisedButton(
