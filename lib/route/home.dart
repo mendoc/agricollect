@@ -1,20 +1,29 @@
 import 'package:agricollect/config.dart';
-import 'package:agricollect/route/connexion.dart';
-import 'package:flutter/material.dart';
+import 'package:agricollect/route/new_campagne.dart';
 import 'package:agricollect/widget/campagne.dart';
 import 'package:agricollect/widget/menu_lateral.dart';
-import 'package:agricollect/route/new_campagne.dart';
+import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  final nom;
+  final email;
+
+  const HomeScreen({Key key, this.nom, this.email}) : super(key: key);
+
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HomeScreenState createState() => _HomeScreenState(this.nom, this.email);
 }
 
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
+  final nom;
+  final prenom;
+
   TabController _controller;
 
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+
+  _HomeScreenState(this.nom, this.prenom);
 
   @override
   void initState() {
@@ -24,10 +33,7 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    MenuLateral dr = MenuLateral(
-      nom: "Mbadinbga Moure",
-      email: "m.mbadinga@gmail.com"
-      );
+    MenuLateral dr = MenuLateral(nom: this.nom, email: this.prenom);
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,

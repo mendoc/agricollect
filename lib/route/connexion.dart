@@ -209,7 +209,11 @@ class _ConnexionState extends State<Connexion> {
         } else {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (context) => HomeScreen(),
+              builder: (context) => HomeScreen(
+                  nom: response["data"]["prenom"] +
+                      " " +
+                      response["data"]["nom"],
+                  email: params["email"]),
             ),
           );
         }

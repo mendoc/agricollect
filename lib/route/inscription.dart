@@ -3,7 +3,7 @@ import 'dart:convert'; //it allows us to convert our json to a list
 import 'package:agricollect/config.dart';
 import 'package:agricollect/config/endpoints.dart';
 import 'package:agricollect/model/Organisation.dart';
-import 'package:agricollect/route/home.dart';
+import 'package:agricollect/route/connexion.dart';
 import 'package:agricollect/util/master.dart';
 import 'package:flutter/material.dart';
 
@@ -84,10 +84,7 @@ class _InscriptionState extends State<Inscription> {
                                   Icons.account_circle,
                                 )),
                             validator: (value) {
-                              if (value.isEmpty) {
-                                return 'Veuillez renseigner votre prénom';
-                              }
-                              params["prenom"] = value;
+                              params["prenom"] = value.isEmpty ? "" : value;
                               return null;
                             },
                           ),
@@ -145,6 +142,28 @@ class _InscriptionState extends State<Inscription> {
                             value: _currentCity,
                             items: _dropDownMenuItems,
                             onChanged: changedDropDownItem,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 25, right: 25),
+                          child: TextFormField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              labelText: "Nom d'utilisateur",
+                              prefixIcon: Icon(
+                                Icons.account_circle,
+                              ),
+                            ),
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return "Veuillez choisir un nom d'utilisateur";
+                              }
+                              params["pseudo"] = value;
+                              return null;
+                            },
                           ),
                         ),
                       ),
@@ -253,7 +272,6 @@ class _InscriptionState extends State<Inscription> {
 
   void sendInfos(Map<String, dynamic> params) {
     params['organisation'] = _currentCity.toString();
-    params['pseudo']       = params['email'];
     print(params);
     post(INSCRIPTION_URL, params).then((res) {
       Map<String, dynamic> response = json.decode(res.body);
@@ -264,7 +282,7 @@ class _InscriptionState extends State<Inscription> {
         } else {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (context) => HomeScreen(),
+              builder: (context) => Connexion(),
             ),
           );
         }
@@ -310,5 +328,36 @@ class _InscriptionState extends State<Inscription> {
     setState(() {
       _currentCity = selectedOrg;
     });
+  }
+
+  void showConfirmation(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          content: Text(
+              "Votre compte a bien été créé. Vous serez invité à vous conneter."),
+          actions: <Widget>[
+            FlatButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => Connexion(),
+                  ),
+                );
+              },
+              child: Text(
+                "OK",
+                style: TextStyle(
+                    fontFamily: "Raleway",
+                    color: Colors.green[800],
+                    fontWeight: FontWeight.bold),
+              ),
+            )
+          ],
+        );
+      },
+    );
   }
 }

@@ -10,12 +10,15 @@ class NewCampagne extends StatefulWidget {
 
 class _NewCampagneState extends State<NewCampagne>
     with SingleTickerProviderStateMixin {
+  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     MenuLateral dr =
         MenuLateral(nom: "Mbadinbga Moure", email: "m.mbadinga@gmail.com");
     return SafeArea(
       child: Scaffold(
+        key: _scaffoldKey,
         drawer: dr,
         body: SingleChildScrollView(
           child: Column(
@@ -33,7 +36,7 @@ class _NewCampagneState extends State<NewCampagne>
                         color: mainColor,
                       ),
                       onTap: () {
-                        
+                        _scaffoldKey.currentState.openDrawer();
                       },
                     ),
                     Image.asset(
