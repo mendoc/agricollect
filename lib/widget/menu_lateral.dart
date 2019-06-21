@@ -1,7 +1,6 @@
-import 'package:agricollect/route/home.dart';
+import 'package:agricollect/route/connexion.dart';
 import 'package:agricollect/route/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:agricollect/route/connexion.dart';
 
 class MenuLateral extends StatelessWidget {
   final nom;
@@ -36,8 +35,6 @@ class MenuLateral extends StatelessWidget {
               title: Text("Accueil"),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => HomeScreen()));
               }),
           ListTile(
               leading: Icon(Icons.edit),
