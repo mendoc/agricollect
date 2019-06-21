@@ -3,7 +3,8 @@ import 'package:agricollect/route/public_campaign.dart';
 // import 'package:agricollect/route/inscription.dart';
 // import 'package:agricollect/route/reset_page.dart';
 import 'package:flutter/material.dart';
-import 'config.dart';
+import 'package:agricollect/route/collectprix.dart';
+import 'package:agricollect/config.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,3 +19,29 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
