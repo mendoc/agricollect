@@ -1,77 +1,57 @@
+// Flutter code sample for material.DropdownButton.1
+
+// This sample shows a `DropdownButton` whose value is one of
+// "One", "Two", "Free", or "Four".
+
 import 'package:flutter/material.dart';
 
-class SandyShores extends StatelessWidget{
+void main() => runApp(MyApp());
 
-  static String routeName = "sandyShores";
+/// This Widget is the main application widget.
+class MyApp extends StatelessWidget {
+  static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
-    return new Center(
-      child: new Text("You've landed on the Sandy Shores!"),
-    );
-  }
-
-}
-
-class MyApp extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    var routes = <String, WidgetBuilder>{
-      SandyShores.routeName: (BuildContext context) => new SandyShores(),
-    };
-
-    return new MaterialApp(
-      title: 'Flutter Demo',
-      home: new MyHomePage(title: 'Flutter Demo Homepage'),
-      routes: routes,
-    );
-  }
-
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage>{
-  @override
-  Widget build(BuildContext context) {
-
-    var headerText = new Text('Headers');
-
-    var header = new DrawerHeader(child: headerText);
-
-    var item1Text = new Text('Sandy Shores');
-
-    var item1Icon = new Icon(Icons.settings);
-
-    var item1 = new ListTile(
-        title: item1Text, leading: item1Icon, onTap: _onItem1OnTap);
-
-    var children = [header, item1];
-
-    var listView = new ListView(children: children);
-
-    var drawer = new Drawer(child: listView);
-
-    return new Scaffold(
-      drawer: drawer,
-      appBar: new AppBar(
-        title: new Text('Tabs Demo'),
-      ),
-      body: new Center(
-        child: new Text(''),
+    return MaterialApp(
+      title: _title,
+      home: Scaffold(
+        appBar: AppBar(title: Text(_title)),
+        body: MyStatefulWidget(),
       ),
     );
-
   }
+}
 
-  void _onItem1OnTap() {
-    Navigator.popAndPushNamed(context, SandyShores.routeName);
+String dropdownValue = 'One';
+
+class MyStatefulWidget extends StatefulWidget {
+  MyStatefulWidget({Key key}) : super(key: key);
+
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: DropdownButton<String>(
+          value: dropdownValue,
+          onChanged: (String newValue) {
+            setState(() {
+              dropdownValue = newValue;
+            });
+          },
+          items: <String>['One', 'Two', 'Free', 'Four']
+              .map<DropdownMenuItem<String>>((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(value),
+            );
+          }).toList(),
+        ),
+      ),
+    );
   }
 }

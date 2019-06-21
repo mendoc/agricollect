@@ -1,5 +1,6 @@
 import 'package:agricollect/config.dart';
 import 'package:agricollect/route/connexion.dart';
+import 'package:agricollect/route/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:agricollect/widget/campagne.dart';
 import 'package:agricollect/route/new_campagne.dart';
@@ -63,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen>
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (BuildContext context) =>
-                        OtherPage("Editer mon profil")));
+                        Profile()));
               }),
           ListTile(
               leading: Icon(Icons.info_outline),

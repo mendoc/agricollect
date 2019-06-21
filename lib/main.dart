@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:agricollect/route/collectprix.dart';
 import 'package:agricollect/config.dart';
+import 'package:agricollect/route/splashscreen.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: mainColor),
       title: 'AGRI COLLECT',
-      home: CollectPrix(),
+      home: SplashScreen(),
       
     );
   }
