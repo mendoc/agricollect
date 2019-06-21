@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:agricollect/route/insert_code.dart';
+import 'package:flutter/material.dart';
 
 class Reset extends StatefulWidget {
   @override

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:agricollect/config.dart';
 import 'package:agricollect/widget/menu_lateral.dart';
+import 'package:flutter/material.dart';
 
 class CollectPrix extends StatefulWidget {
   @override

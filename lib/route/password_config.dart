@@ -1,6 +1,6 @@
 import 'package:agricollect/config.dart';
-import 'package:flutter/material.dart';
 import 'package:agricollect/route/connexion.dart';
+import 'package:flutter/material.dart';
 
 class NewPassword extends StatefulWidget {
   @override

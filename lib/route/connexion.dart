@@ -1,13 +1,13 @@
 import 'dart:convert';
 
+import 'package:agricollect/config.dart';
 import 'package:agricollect/config/endpoints.dart';
+import 'package:agricollect/route/home.dart';
 import 'package:agricollect/route/inscription.dart';
+import 'package:agricollect/route/reset_page.dart';
 import 'package:agricollect/util/master.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:agricollect/config.dart';
-import 'package:agricollect/route/home.dart';
-import 'package:agricollect/route/reset_page.dart';
 
 class Connexion extends StatefulWidget {
   @override

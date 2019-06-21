@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:agricollect/route/password_config.dart';
+import 'package:flutter/material.dart';
 
 class InsertCode extends StatefulWidget {
   @override
